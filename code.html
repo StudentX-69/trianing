@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div class="main">
+        <div>
+            <label for="">Your name</label>
+            <input type="text" name="" id="ice">
+            <br>
+            <label> Choose an ice-cream flavor
+            <select name="iceCreams" id="iceCreams" onchange="callingFunction()" onclick="click()" >
+                <option value="">Select</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="strawberry">Strawberry</option>
+            </select> 
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        const selectElement = () => {
+            const inputChange = document.getElementById("ice");
+            const iceCreams = document.getElementById("iceCreams");
+
+            // console.log(inputChange.value);
+            // console.log(iceCreams.value);
+            // console.log(`${inputChange.value} loves ${iceCreams.value} ice-cream!`);
+            result.innerHTML = `${inputChange.value} loves ${iceCreams.value} ice-cream!`;
+        } 
+
+        // const callingFunction = () => { alert("Hello World"); }
+       
+    </script> -->
+
+    <div class="main-div">
+        <div>
+            <p>Want to know my Name ?</p>
+            <!-- <p id="showMyName"></p> -->
+            <br>
+            <button id="btn">start</button>
+            <button id="btn">stop</button>
+        </div>
+    </div>
+
+    <script>
+        // const MyName = document.getElementById("showMyName");
+        // const btn = document.getElementById("btn");
+
+        // const showMyNameFunction = () => {
+        //     MyName.innerHTML = "Loading...";
+        //     setTimeout(() => {
+        //         MyName.innerHTML = "My name is Aniket";
+        //     }, 1000);
+        // }
+
+        // btn.addEventListener('click', showMyNameFunction);
+
+        const stopNum = document.querySelector('p');
+        const btn = document.querySelector('#btn');
+        const stopInterval = document.querySelector('#btn1');
+
+        let timeRef;
+        let num = 0;
+
+        const showMyNum = () => {
+            stopNum.innerHTML = "Loading..."
+           
+           timeRef = setInterval(() => {
+                stopNum.innerHTML = `${num}`;
+                num++;
+        },1000)
+        }
+
+        btn.addEventListener('click', showMyNum);
+
+        stopInterval.addEventListener('click', () => {
+            clearInterval(timeRef);
+        });
+    </script>
+    
+</body>
+</html>
