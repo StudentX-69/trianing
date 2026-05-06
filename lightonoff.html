@@ -8,11 +8,24 @@
 <body>
    <div>
     <h1>can you turn on the bulb?</h1>
-    <button onclick="document.getElementById('myimage').src = 'lighton.png'">Turn On Light</button>
-    <img src="lightoff.png" alt="lightoff" id="myimage"'>
-    <button onclick="document.getElementById('myimage').src = 'lighton.png' ">Turn light on</button>
+     <img src="lightoff.png" alt="lightoff" id="myimage">
+    <button onclick="document.getElementById('myimage').src = 'lighton.png'" >Turn On Light</button>
+    <button onclick="document.getElementById('myimage').src = 'lightoff.png' ">Turn light off</button>
    </div>
-
+<style>
+   body{
+    background-color: rgb(1, 1, 62);
+   }
+   h1{
+     color:aliceblue;
+     display: flex;
+     justify-content: center;
+   }
+   img{
+    filter:drop-shadow( 2px 4px 6px white) ;
+   }
+   </style> 
+   
    
 </body>
 </html>
