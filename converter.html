@@ -15,6 +15,12 @@
         label{
             font-size: 1.5rem;
         }
+        input{
+            padding: 10px;
+        }
+        select{
+            padding: 10px;
+        }
     </style>
     <form id="tempcalc" onsubmit="calculateTemp(); return false">
 
@@ -22,8 +28,8 @@
     <input type="number" id="temp" name="temp"> 
 
     <select name="temp_diff" id="temp_diff"> 
-    <option value="cel">°celsius</option>
-    <option value="fah">°fahrenheit</option>  
+    <option value="cel">&deg;celsius to fahrenheit</option>
+    <option value="fah">&deg;fahrenheit to celsius</option>  
     </select>
     <br>
     <input type="submit" name="temp"> <br> 
