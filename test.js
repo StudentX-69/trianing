@@ -84,3 +84,65 @@ const myBio = ["Abhay",'Nirmalkar',20];
 let [myFirstname,myAge,myLastname,myDegree='BCA'] = myBio;
 console.log(myDegree);
 
+//Object Destructuring
+const myBioadata = {
+    myName : 'Abhay nimalkar',
+    Age : 20,
+}
+let {myName,Age,MyDegree='BCA'}=myBioadata;
+console.log(Age)
+
+//
+var age = 17;
+if (age >=18){
+    console.log("eligible to vote")
+} else{
+    console.log("under age not eligible to vote")
+}
+
+var age = 17 ;
+console.log((age >= 18) ? "you can vote " : "you can not vote");
+
+//
+var area = "Triangle";
+var PI = 3.142 , l=5 , b=6; r=7;
+
+if(area == 'circle'){
+    console.log("Area of Circle is : " + PI*r**2)
+}else if(area == 'Triangle'){
+    console.log("Area of Triangle is : " + (l*b)/2)
+}else if(area == 'Rectangle'){
+    console.log("Area of Rectangle is : " + l*b)
+}
+
+//
+var area = "dsfsad";
+var PI = 3.142, l=5, b=4, r=3;
+switch(area){
+    case 'Circle':
+    console.log("the area of circle is: " +PI*r**2);
+    break;
+    case 'Triangle':
+    console.log("the area of Triangle is: " +(l*b)/2);
+    break;
+    case 'Rectangle':
+    console.log("the area of Rectangle is: " + (l*b));
+    break;
+    default:
+    console.log("please enter valid data");
+}
+
+// While loop
+var num = 0 ;
+while(num < 10){
+    console.log(num);
+    num++;
+}
+
+// Do While loop statement
+var num = 20;
+do{
+    debugger;
+    console.log(num);
+    num++;
+}while(num < 10);
