@@ -146,3 +146,124 @@ do{
     console.log(num);
     num++;
 }while(num < 10);
+
+// for loop
+for(var num = 0; num < 10; num++){
+    debugger;
+    console.log(num);
+}
+for(var num = 0; num < 10; num++){
+    var TableOf = 12;
+    console.log(TableOf + "*" + num + "="+TableOf*num);
+}
+
+//
+function sum(a,b){
+    var Total = a+b;
+    console.log(Total)
+}
+sum();
+sum(20,10);
+sum(23,13);
+
+//
+var funExp = function(a,b){
+    return Total = a+b;
+}
+
+var sum = funExp(15,115);
+var sum1 = funExp(20,15);
+
+console.log( sum < sum1);
+
+//
+function BioData() {
+    let MyFirstName = "Abhay";
+    console.log(MyFirstName);
+
+  if(true){
+    var MyLastName = "Nirmalkar";
+    console.log('inner'+MyLastName);
+    console.log('inner'+MyFirstName);
+  }
+  console.log('innerOuter'+ MyLastName);
+}
+
+BioData();
+
+// Template Literals
+for(let num = 1 ; num < 10 ; num++){
+    let TableOf = 8;
+    console.log(`${TableOf} * ${num} = ${TableOf * num}`);
+}
+
+//Default parameters
+function mult(a,b=5){
+    return a * b ;
+}
+console.log(mult(9))
+
+// Fat arrow Function
+const Sum = () => `the sum of the two number is ${(a=5)+(b=4)}`;
+console.log(Sum());
+
+// For in loop // index no
+ var myFriends = ['vinnu','gajendra','yogesh']
+
+for (let elements in myFriends){
+    console.log(elements);
+}
+// For of loop // elements
+for (let elements of myFriends){
+    console.log(elements);
+}
+
+// Sort an array
+const numbers = [5,7,9,4]
+numbers.sort();
+console.log(numbers);
+// Ascending order
+numbers.sort((a,b) => a-b)
+console.log(numbers);
+// Descending order
+numbers.sort((a,b) => b-a)
+console.log(numbers);
+
+// Challange 1
+const months = ['jan','march','april','june','july'];
+months.push('dec')
+// console.log(months);
+months.splice(2,3)
+// console.log(months);
+months[1] = 'March'
+// console.log(months)
+months.pop('june')
+// console.log(months)
+
+// Challenge 2
+let Array = [25,36,49,64,81];
+let Result = Array.map(Math.sqrt);
+console.log(Result);
+// Challenge 3
+let Ar = [2,3,4,6,8];
+const Result1 = Ar
+ .map(num => num *2)
+ .filter(num => num > 10);
+console.log(Result1);
+
+// challenge 4
+const Display = "A 150-word text is a concise, focused piece of writing, typically spanning 0.3 single-spaced or 0.6 double-spaced pages, ideal for short essays, summaries, or paragraphs. It requires a clear introduction, one or two supporting body paragraphs, and a brief conclusion to effectively convey a message without unnecessary detail. To create a 150-word piece, it is recommended to write a longer draft first, then remove filler words and edit strictly for impact. This length is sufficient to convey a complete thought, such as describing a personal experience or arguing a single point, without overwhelming the reader. It is a popular constraint for creative writing, such as short stories, as well as academic examples and movie reviews. Effective 150-word texts focus on direct communication rather than extensive, detailed explanations. It constitutes roughly 10-15 sentences, depending on sentence complexity.";
+
+
+
+// The Concat Method
+let fName = "Abhay"
+let lName = "Nirmalkar"
+console.log(fName + lName);
+console.log(`${fName} ${lName}`);
+console.log(fName.concat(lName));
+console.log(fName.concat(" ",lName));
+
+// String.trim()
+var str = "           hello            world!                         ";
+console.log(str.trim());
