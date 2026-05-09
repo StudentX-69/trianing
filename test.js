@@ -51,13 +51,15 @@ const Arr = [
     ["Zone_1","Zone_2" ],
     ["Zone_3","Zone_4" ],
     ["Zone_5","Zone_6" ],
-    ["Zone_7","Zone_8" ]
+    ["Zone_7","Zone_8",["Zone_9","Zone_0", ]
+] 
 ]
 let flatArr = Arr.reduce((accum,curval) =>
 {
     return accum.concat(curval)
 })
 console.log(flatArr)
+console.log(Arr.flat(Infinity));
 
 // Extraction of string by splice method
 var str = "apple,banana,kiwi,mango";
@@ -252,7 +254,9 @@ const Result1 = Ar
 console.log(Result1);
 
 // challenge 4
-const Display = "A 150-word text is a concise, focused piece of writing, typically spanning 0.3 single-spaced or 0.6 double-spaced pages, ideal for short essays, summaries, or paragraphs. It requires a clear introduction, one or two supporting body paragraphs, and a brief conclusion to effectively convey a message without unnecessary detail. To create a 150-word piece, it is recommended to write a longer draft first, then remove filler words and edit strictly for impact. This length is sufficient to convey a complete thought, such as describing a personal experience or arguing a single point, without overwhelming the reader. It is a popular constraint for creative writing, such as short stories, as well as academic examples and movie reviews. Effective 150-word texts focus on direct communication rather than extensive, detailed explanations. It constitutes roughly 10-15 sentences, depending on sentence complexity.";
+const tweet = "A 150-word text is a concise, focused piece of writing, typically spanning 0.3 single-spaced or 0.6 double-spaced pages, ideal for short essays, summaries, or paragraphs. It requires a clear introduction, one or two supporting body paragraphs, and a brief conclusion to effectively convey a message without unnecessary detail. To create a 150-word piece, it is recommended to write a longer draft first, then remove filler words and edit strictly for impact. This length is sufficient to convey a complete thought, such as describing a personal experience or arguing a single point, without overwhelming the reader. It is a popular constraint for creative writing, such as short stories, as well as academic examples and movie reviews. Effective 150-word texts focus on direct communication rather than extensive, detailed explanations. It constitutes roughly 10-15 sentences, depending on sentence complexity.";
+displaytweet = tweet.slice(0,120)
+console.log(displaytweet);
 
 
 
@@ -267,3 +271,83 @@ console.log(fName.concat(" ",lName));
 // String.trim()
 var str = "           hello            world!                         ";
 console.log(str.trim());
+
+// Converting a string into an array 
+var txt = "a,b,c d,e";
+console.log(txt.split(","));
+console.log(txt.split(" "));
+console.log(txt.split("|"));
+
+//
+let currDate = new Date();
+console.log(currDate);
+
+console.log(new Date());
+console.log(new Date().toLocaleString());
+console.log(new Date().toString());
+
+//
+const currTime = new Date ();
+// How to get individual time
+console.log(currTime.getTime());
+console.log(currTime.getHours());
+console.log(currTime.getMinutes());
+console.log(currTime.getSeconds());
+console.log(currTime.getMilliseconds());
+
+// Math.pow()
+console.log(Math.pow(2,3));
+console.log(2**3)
+// Math.sqrt()
+console.log(Math.sqrt(23));
+console.log(Math.sqrt(64));
+
+// 2nd way of writing function 
+// const callingfunction = () => {
+//     alert('Most common way of calling function');
+// }
+// 3rd way of writing function
+// const thirdway = document.getElementById('thirdway')
+// thirdway.onclick = function(){
+//      alert('Most common way of calling function');
+// }
+//4th way of writing function
+// const fourthway = document.querySelector('#fourthway');
+// fourthway.addEventListener('click',() =>{
+//     alert('i love this way of writing functions')
+// })
+
+// How to create an object
+// 1st way
+ let bioData = {
+    myName : "Abhay nirmalakar",
+    myAge : 20,
+    getData : function(){
+        console.log(`My name is ${bioData.myName} and my age is ${bioData.myAge}`);
+    }
+ }
+bioData.getData();
+
+// Object Properties
+let myname = "Abhay";
+const mybio ={
+    [myname] : "hello! how are you",
+    [20+6] : "is my age"
+}
+console.log(mybio);
+
+// Spread operator
+const colours = ['red','green','blue','white','pink'];
+const mycolours = ['red','green','blue','white','pink','yellow','black']
+const myfav = [...colours,'violet','aliceblue'];
+console.log(myfav);
+
+// ES7 features
+const colors =  ['red','green','blue','white','pink'];
+const ispresent = colors.includes('purple');
+console.log(ispresent);
+
+//
+const person = { name: `Fred`, age: `87`};
+console.log(Object.values(person));
+console.log(Object.entries(person));
